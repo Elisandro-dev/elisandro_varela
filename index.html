@@ -1,0 +1,671 @@
+<!doctype html>
+<html lang="pt-BR" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elisandro Rosa Varela | IT/OT Integration &amp; Industrial Automation</title>
+  <meta name="description" content="Currículo digital de Elisandro Rosa Varela, profissional de Automação Industrial, Integração IT/OT, Comissionamento, IoT Industrial e Sistemas Industriais.">
+  <script src="/_sdk/element_sdk.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0a0f1c;
+      --card: #111827;
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-2: #22c55e;
+      --line: #1f2937;
+      --white: #ffffff;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html, body { height: 100%; width: 100%; }
+
+    body {
+      font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .page-wrapper {
+      width: 100%;
+      height: 100%;
+      overflow-y: auto;
+      position: relative;
+      background:
+        radial-gradient(ellipse 80% 50% at 20% 0%, rgba(56, 189, 248, 0.15), transparent),
+        radial-gradient(ellipse 60% 50% at 80% 100%, rgba(34, 197, 94, 0.08), transparent),
+        linear-gradient(180deg, #020617 0%, #0a0f1c 50%, #0a0f1c 100%);
+    }
+
+    /* Grid pattern overlay */
+    .page-wrapper::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(56, 189, 248, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(56, 189, 248, 0.04) 1px, transparent 1px);
+      background-size: 50px 50px;
+      pointer-events: none;
+      mask-image: radial-gradient(ellipse at center top, black 0%, transparent 70%);
+    }
+
+    a { color: var(--accent); text-decoration: none; transition: color 0.2s; }
+    a:hover { color: #7dd3fc; }
+
+    .container {
+      width: 92%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 32px 0 48px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* HEADER */
+    header {
+      background: linear-gradient(135deg, rgba(17, 24, 39, 0.85), rgba(15, 23, 42, 0.7));
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 44px;
+      margin-bottom: 28px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+      position: relative;
+      overflow: hidden;
+      animation: fadeUp 0.7s ease both;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: -2px; left: -2px; right: -2px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--accent), var(--accent-2), transparent);
+    }
+
+    .hero-top {
+      display: flex;
+      align-items: flex-start;
+      gap: 28px;
+      flex-wrap: wrap;
+    }
+
+    .avatar {
+      width: 110px;
+      height: 110px;
+      min-width: 110px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 42px;
+      font-weight: 700;
+      color: #020617;
+      box-shadow: 0 10px 30px rgba(56, 189, 248, 0.3);
+      flex-shrink: 0;
+    }
+
+    .hero-text { flex: 1; min-width: 260px; }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(56, 189, 248, 0.1);
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 500;
+      margin-bottom: 16px;
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .badge-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--accent-2);
+      box-shadow: 0 0 8px var(--accent-2);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+
+    h1 {
+      font-size: 44px;
+      line-height: 1.1;
+      color: var(--white);
+      margin-bottom: 14px;
+      letter-spacing: -0.02em;
+      font-weight: 700;
+    }
+
+    .headline {
+      font-size: 18px;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 22px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 18px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .contact-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .contact-item i {
+      width: 16px; height: 16px;
+      color: var(--accent);
+    }
+
+    /* LAYOUT GRID */
+    .grid {
+      display: grid;
+      grid-template-columns: 1.55fr 1fr;
+      gap: 24px;
+    }
+
+    .col { display: flex; flex-direction: column; gap: 24px; }
+
+    section {
+      background: linear-gradient(135deg, rgba(17, 24, 39, 0.85), rgba(15, 23, 42, 0.7));
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 28px;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+      animation: fadeUp 0.7s ease both;
+    }
+
+    section:nth-child(1) { animation-delay: 0.1s; }
+    section:nth-child(2) { animation-delay: 0.2s; }
+    section:nth-child(3) { animation-delay: 0.3s; }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h2 {
+      font-size: 20px;
+      color: var(--white);
+      margin-bottom: 22px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      letter-spacing: -0.01em;
+    }
+
+    h2 i { width: 20px; height: 20px; color: var(--accent); }
+
+    h3 {
+      color: var(--white);
+      font-size: 17px;
+      margin-bottom: 4px;
+      font-weight: 600;
+    }
+
+    /* ROLES / EXPERIENCE */
+    .role {
+      position: relative;
+      padding-left: 24px;
+      padding-bottom: 24px;
+      border-left: 2px solid var(--line);
+      margin-left: 6px;
+    }
+
+    .role:last-child { padding-bottom: 0; border-left-color: transparent; }
+
+    .role::before {
+      content: '';
+      position: absolute;
+      left: -7px; top: 6px;
+      width: 12px; height: 12px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.15);
+    }
+
+    .company {
+      color: var(--accent-2);
+      font-weight: 600;
+      margin-bottom: 6px;
+      font-size: 15px;
+    }
+
+    .period {
+      display: inline-block;
+      color: var(--muted);
+      font-size: 12px;
+      margin-bottom: 12px;
+      padding: 3px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--line);
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    ul { padding-left: 18px; margin-top: 8px; }
+    li { margin-bottom: 8px; color: #cbd5e1; font-size: 14.5px; }
+    li::marker { color: var(--accent); }
+
+    /* SKILLS */
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .skill {
+      background: rgba(56, 189, 248, 0.08);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      color: #cbd5e1;
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-family: 'JetBrains Mono', monospace;
+      transition: all 0.2s;
+    }
+
+    .skill:hover {
+      background: rgba(56, 189, 248, 0.15);
+      border-color: var(--accent);
+      transform: translateY(-1px);
+    }
+
+    .skill-group {
+      margin-bottom: 18px;
+    }
+    .skill-group:last-child { margin-bottom: 0; }
+    .skill-group-title {
+      color: var(--accent-2);
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* SUMMARY */
+    .summary-text {
+      color: #cbd5e1;
+      font-size: 15px;
+      line-height: 1.75;
+    }
+
+    /* EDU / LANG / CERT ITEMS */
+    .mini-item {
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: rgba(2, 6, 23, 0.4);
+      margin-bottom: 12px;
+    }
+    .mini-item:last-child { margin-bottom: 0; }
+    .mini-item strong { color: var(--white); font-size: 14.5px; display: block; margin-bottom: 3px; }
+    .mini-item span { color: var(--muted); font-size: 13px; }
+
+    .lang-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 14px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: rgba(2, 6, 23, 0.3);
+      margin-bottom: 8px;
+    }
+    .lang-row:last-child { margin-bottom: 0; }
+    .lang-level {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      color: var(--accent-2);
+    }
+
+    /* CTA */
+    .cta-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 11px 18px;
+      border-radius: 10px;
+      background: var(--accent);
+      color: #020617 !important;
+      font-weight: 600;
+      font-size: 14px;
+      transition: all 0.2s;
+    }
+    .cta:hover {
+      background: #7dd3fc;
+      transform: translateY(-2px);
+      text-decoration: none !important;
+      box-shadow: 0 8px 20px rgba(56, 189, 248, 0.3);
+    }
+    .cta.secondary {
+      background: transparent;
+      color: var(--accent) !important;
+      border: 1px solid var(--accent);
+    }
+    .cta.secondary:hover {
+      background: rgba(56, 189, 248, 0.1);
+    }
+    .cta i { width: 16px; height: 16px; }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      padding: 32px 0 12px;
+      font-size: 13px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    @media (max-width: 850px) {
+      .grid { grid-template-columns: 1fr; }
+      header { padding: 28px; }
+      h1 { font-size: 30px; }
+      .headline { font-size: 16px; }
+      .avatar { width: 80px; height: 80px; min-width: 80px; font-size: 30px; }
+      section { padding: 22px; }
+    }
+  </style>
+  <style>body { box-sizing: border-box; }</style>
+  <script src="https://cdn.tailwindcss.com/3.4.17" type="text/javascript"></script>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="h-full">
+  <div class="page-wrapper">
+   <main class="container">
+    <!-- HEADER -->
+    <header>
+     <div class="hero-top"><img class="avatar" id="avatar" src="image.png" alt="Elisandro Rosa Varela" loading="lazy" onerror="console.error('Image failed to load:', this.src); this.style.background='linear-gradient(135deg, #38bdf8, #22c55e)'; this.textContent='EV'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.alt='Foto de perfil não disponível';" style="object-fit: cover; object-position: center;">
+      <div class="hero-text">
+       <div class="badge">
+        <span class="badge-dot"></span> <span id="badge-text">Disponível para novos projetos</span>
+       </div>
+       <h1 id="full-name">Elisandro Rosa Varela</h1>
+       <div class="headline" id="headline">
+        AUTOMAÇÃO INDUSTRIAL · SISTEMAS INDUSTRIAIS · COMISSIONAMENTO · INTEGRAÇÃO
+       </div>
+       <div class="contact">
+        <span class="contact-item"><i data-lucide="mail"></i><a id="email-link" href="mailto:elisandrovarela18@gmail.com"><span id="email">elisandrovarela18@gmail.com</span></a></span> <span class="contact-item"><i data-lucide="phone"></i><span id="phone">+55 (11) 98765-4321</span></span> <span class="contact-item"><i data-lucide="map-pin"></i><span id="location">São Paulo – SP – Brasil</span></span> <span class="contact-item"><i data-lucide="linkedin"></i><a id="linkedin-link" href="https://linkedin.com/in/elisandro-varela" target="_blank" rel="noopener noreferrer">LinkedIn</a></span> <span class="contact-item"><i data-lucide="github"></i><a id="github-link" href="https://github.com/Elisandro-dev" target="_blank" rel="noopener noreferrer">GitHub</a></span>
+       </div>
+       <div class="cta-row">
+        <a href="#" id="cta-email" class="cta"><i data-lucide="send"></i> Entrar em contato</a> <a href="#" id="cta-linkedin" class="cta secondary" target="_blank" rel="noopener noreferrer"><i data-lucide="external-link"></i> Ver LinkedIn</a>
+       </div>
+      </div>
+     </div>
+    </header><!-- MAIN GRID -->
+    <div class="grid">
+     <!-- LEFT COLUMN -->
+     <div class="col">
+      <!-- SUMMARY -->
+      <section>
+       <h2><i data-lucide="user"></i><span id="summary-title">Resumo Profissional</span></h2>
+       <p class="summary-text" id="summary-text">Profissional de Automação Industrial com mais de 8 anos de experiência em campo, atuando com instalação, comissionamento, diagnóstico de falhas e otimização de sistemas automatizados em ambientes industriais complexos. Experiência com células robóticas, linhas de paletização e máquinas de embalagem, além de integração de sistemas industriais utilizando CLPs, redes industriais e dispositivos de campo, com tecnologias de fabricantes como KUKA, Siemens, Rockwell, Schneider, Sick, IFM e Omron. Atuação em projetos na América Latina e América do Norte, seguindo padrões internacionais e ambientes multiculturais. Atualmente cursando Análise e Desenvolvimento de Sistemas, com foco em IoT Industrial, sistemas embarcados e Indústria 4.0.</p>
+      </section><!-- EXPERIENCE -->
+      <section>
+       <h2><i data-lucide="briefcase"></i>Experiência Profissional</h2>
+       <div class="role">
+        <h3>Analista de Automação</h3>
+        <div class="company">
+         ROBOPAC
+        </div>
+        <div class="period">
+         Set 2025 — Atual
+        </div>
+        <ul>
+         <li>Diagnóstico e solução de falhas em sistemas automatizados industriais</li>
+         <li>Análise de desempenho de equipamentos e identificação de melhorias</li>
+         <li>Suporte técnico em máquinas de automação de fim de linha</li>
+         <li>Atuação com sensores, controladores e redes industriais</li>
+         <li>Garantia de confiabilidade operacional em ambiente produtivo</li>
+        </ul>
+       </div>
+       <div class="role">
+        <h3>Técnico Eletricista / Automação Industrial</h3>
+        <div class="company">
+         SANMARTIN
+        </div>
+        <div class="period">
+         Abr 2021 — Set 2025
+        </div>
+        <ul>
+         <li>Montagem, instalação e comissionamento de máquinas e células robóticas</li>
+         <li>Configuração de CLPs, inversores de frequência e IHMs</li>
+         <li>Implementação de redes industriais (Modbus, Profinet)</li>
+         <li>Integração de sensores, atuadores e dispositivos de campo</li>
+         <li>Leitura e interpretação de diagramas elétricos e projetos técnicos</li>
+         <li>Participação em projetos industriais nacionais e internacionais</li>
+        </ul>
+       </div>
+      </section><!-- PROJECTS / HIGHLIGHTS -->
+      <section>
+       <h2><i data-lucide="zap"></i>Projetos em Destaque</h2>
+       <div class="role">
+        <h3>Sistema de Paletização e Envolvimento</h3>
+        <div class="company">
+         Cervejaria Taquiña — Cochabamba, Bolívia
+        </div>
+        <ul>
+         <li>Comissionamento de sistema de paletização automatizado e máquina de envolvimento</li>
+         <li>Integração de controladores e sensores de campo em ambiente de produção</li>
+         <li>Configuração de redes industriais para sincronização de equipamentos</li>
+        </ul>
+       </div>
+       <div class="role">
+        <h3>Sistema de Transporte por Esteira</h3>
+        <div class="company">
+         Cervejaria Budweiser — Jacksonville, Flórida (EUA)
+        </div>
+        <ul>
+         <li>Instalação e comissionamento de linha de transporte por esteira de alta capacidade</li>
+         <li>Diagnóstico e otimização de sistemas de controle em ambiente de produção contínua</li>
+         <li>Atuação com tecnologias Siemens e Rockwell em padrões internacionais</li>
+        </ul>
+       </div>
+       <div class="role">
+        <h3>Transporte por Esteira Automatizado</h3>
+        <div class="company">
+         Cervejaria Labatt — London, Ontário (Canadá)
+        </div>
+        <ul>
+         <li>Comissionamento completo de sistema de transporte por esteira de fim de linha</li>
+         <li>Integração com sistemas de controle e rastreamento de produtos</li>
+         <li>Suporte técnico e treinamento de equipes locais em ambientes multiculturais</li>
+        </ul>
+       </div>
+      </section>
+     </div><!-- RIGHT COLUMN -->
+     <div class="col">
+      <!-- SKILLS -->
+      <section>
+       <h2><i data-lucide="cpu"></i>Competências Técnicas</h2>
+       <div class="skill-group">
+        <div class="skill-group-title">
+         Automação Industrial
+        </div>
+        <div class="skills">
+         <span class="skill">Comissionamento de máquinas</span> <span class="skill">Integração de sensores</span> <span class="skill">Configuração de CLPs</span> <span class="skill">Diagnóstico de falhas</span> <span class="skill">Sistemas de controle</span>
+        </div>
+       </div>
+       <div class="skill-group">
+        <div class="skill-group-title">
+         Sistemas Elétricos Industriais
+        </div>
+        <div class="skills">
+         <span class="skill">Montagem de painéis</span> <span class="skill">Diagramas elétricos</span> <span class="skill">Instalação de equipamentos</span> <span class="skill">Inversores de frequência</span> <span class="skill">Acionamentos elétricos</span>
+        </div>
+       </div>
+       <div class="skill-group">
+        <div class="skill-group-title">
+         Redes Industriais
+        </div>
+        <div class="skills">
+         <span class="skill">Modbus</span> <span class="skill">Profinet</span> <span class="skill">Profibus</span> <span class="skill">Ethernet Industrial</span>
+        </div>
+       </div>
+       <div class="skill-group">
+        <div class="skill-group-title">
+         Tecnologias e Fabricantes
+        </div>
+        <div class="skills">
+         <span class="skill">KUKA</span> <span class="skill">Siemens</span> <span class="skill">Rockwell</span> <span class="skill">Schneider</span> <span class="skill">Sick</span> <span class="skill">IFM</span> <span class="skill">Omron</span> <span class="skill">NR12</span> <span class="skill">Indústria 4.0</span> <span class="skill">IoT Industrial</span>
+        </div>
+       </div>
+       <div class="skill-group">
+        <div class="skill-group-title">
+         Programação
+        </div>
+        <div class="skills">
+         <span class="skill">Lógica de programação</span> <span class="skill">C++ (básico)</span> <span class="skill">Arduino / ESP32</span> <span class="skill">IoT</span>
+        </div>
+       </div>
+      </section><!-- EDUCATION -->
+      <section>
+       <h2><i data-lucide="graduation-cap"></i>Formação</h2>
+       <div class="mini-item">
+        <strong>Análise e Desenvolvimento de Sistemas</strong> <span>Anhanguera — Conclusão: Jun 2026</span>
+       </div>
+       <div class="mini-item">
+        <strong>Técnico em Automação Industrial</strong> <span>Uniftec Centro Universitário — 2019</span>
+       </div>
+      </section><!-- CERTIFICATIONS -->
+      <section>
+       <h2><i data-lucide="award"></i>Certificações</h2>
+       <div class="mini-item">
+        <strong>KUKA Service Sistema Elétrico – Técnicas de Sistema</strong> <span>KUKA — Abr 2023 · Credencial: 20j20se</span>
+       </div>
+       <div class="mini-item">
+        <strong>Linguagem de Programação</strong> <span>Alura — Degree Certificate</span>
+       </div>
+       <div class="mini-item">
+        <strong>Google Data Analytics</strong> <span>Coursera — Credencial verificada: QTMDFWV3FSPC</span>
+       </div>
+      </section><!-- LANGUAGES -->
+      <section>
+       <h2><i data-lucide="languages"></i>Idiomas</h2>
+       <div class="lang-row">
+        <span>Português</span> <span class="lang-level">Nativo</span>
+       </div>
+       <div class="lang-row">
+        <span>Inglês</span> <span class="lang-level">Técnico</span>
+       </div>
+       <div class="lang-row">
+        <span>Espanhol</span> <span class="lang-level">Intermediário</span>
+       </div>
+      </section>
+     </div>
+    </div>
+    <footer>
+     <p id="footer-text">© 2025 Elisandro Rosa Varela · Currículo digital</p>
+    </footer>
+   </main>
+  </div>
+  <script>
+    const defaultConfig = {
+      full_name: "Elisandro Rosa Varela",
+      headline: "IT/OT Integration | Industrial Automation | PLC Systems | IoT (MQTT · Node-RED) | Data Integration",
+      badge_text: "Disponível para novos projetos",
+      email: "elisandrovarela18@gmail.com",
+      phone: "+55 (54) 99130-4486",
+      location: "São Paulo – SP – Brasil",
+      linkedin: "https://linkedin.com/in/elisandro-varela",
+      github: "https://github.com/Elisandro-dev",
+      summary_title: "Resumo Profissional",
+      summary_text: "Profissional de Automação Industrial com mais de 8 anos de experiência em campo, atuando com instalação, comissionamento, diagnóstico de falhas e otimização de sistemas automatizados em ambientes industriais complexos. Experiência com células robóticas, linhas de paletização e máquinas de embalagem, além de integração de sistemas industriais utilizando CLPs, redes industriais e dispositivos de campo, com tecnologias de fabricantes como KUKA, Siemens, Rockwell, Schneider, Sick, IFM e Omron. Atuação em projetos na América Latina e América do Norte, seguindo padrões internacionais e ambientes multiculturais. Atualmente cursando Análise e Desenvolvimento de Sistemas, com foco em IoT Industrial, sistemas embarcados e Indústria 4.0.",
+      footer_text: "© 2025 Elisandro Rosa Varela · Currículo digital"
+    };
+
+    function getInitials(name) {
+      const parts = (name || '').trim().split(/\s+/);
+      if (parts.length === 0) return 'EV';
+      if (parts.length === 1) return parts[0].slice(0, 2).toUpperCase();
+      return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
+    }
+
+    async function onConfigChange(config) {
+      const c = { ...defaultConfig, ...config };
+
+      document.getElementById('full-name').textContent = c.full_name;
+      document.getElementById('headline').textContent = c.headline;
+      document.getElementById('badge-text').textContent = c.badge_text;
+      document.getElementById('email').textContent = c.email;
+      document.getElementById('email-link').href = `mailto:${c.email}`;
+      document.getElementById('cta-email').href = `mailto:${c.email}`;
+      document.getElementById('phone').textContent = c.phone;
+      document.getElementById('location').textContent = c.location;
+      document.getElementById('linkedin-link').href = c.linkedin;
+      document.getElementById('cta-linkedin').href = c.linkedin;
+      document.getElementById('github-link').href = c.github;
+      document.getElementById('summary-title').textContent = c.summary_title;
+      document.getElementById('summary-text').textContent = c.summary_text;
+      document.getElementById('footer-text').textContent = c.footer_text;
+      document.title = `${c.full_name} | Currículo`;
+    }
+
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange,
+        mapToCapabilities: () => ({
+          recolorables: [],
+          borderables: [],
+          fontEditable: undefined,
+          fontSizeable: undefined
+        }),
+        mapToEditPanelValues: (config) => {
+          const c = { ...defaultConfig, ...config };
+          return new Map([
+            ["full_name", c.full_name],
+            ["headline", c.headline],
+            ["badge_text", c.badge_text],
+            ["email", c.email],
+            ["phone", c.phone],
+            ["location", c.location],
+            ["linkedin", c.linkedin],
+            ["github", c.github],
+            ["summary_title", c.summary_title],
+            ["summary_text", c.summary_text],
+            ["footer_text", c.footer_text]
+          ]);
+        }
+      });
+    }
+
+    lucide.createIcons();
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9f2f6cb5f6924293',t:'MTc3NzMwOTY1OC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
